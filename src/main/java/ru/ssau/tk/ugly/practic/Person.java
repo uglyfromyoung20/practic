@@ -1,43 +1,79 @@
 package ru.ssau.tk.ugly.practic;
 
 public class Person {
-    private String name;
-    private String secondname;
-    private int id;
+    private String firstName;
+    private String lastName;
+    private int passportId;
 
 
-    public Person(String name, String secondname, int id) {
-        this.name = name;
-        this.secondname = secondname;
-        this.id = id;
+    public Person() {
+        this.firstName = "";
+        this.lastName = "";
+        this.passportId = 0;
+    }
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = 0;
     }
 
-    public String getname() {
-        return name;
+    public Person(int passportId) {
+        this.firstName = "";
+        this.lastName = "";
+        this.passportId = passportId;
     }
 
-    public void setname(String name) {
-        this.name = name;
-    }
-
-    public String getsecondname() {
-        return secondname;
-    }
-
-    public void setsecondname(String secondname) {
-        this.secondname = secondname;
-    }
-
-    public int getid() {
-        return id;
-    }
-
-    public void setid(int id) {
-        this.id = id;
+    public Person(String firstName, String lastName, int passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
     }
 
 
+
+    public Person(String firstName, String lastName, int passportId, String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
+
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getPassportId() {
+        return passportId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setPassportId(int passportId) {
+        this.passportId = passportId;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "This Person is " + firstName + " " + lastName;
+    }
 }
+
+
+
+
+
 
 
 
